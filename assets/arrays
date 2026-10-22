@@ -1,0 +1,28 @@
+// Day 1: Arrays
+
+// Use this data for the exercises:
+
+const products = [
+  { name: "Pen", price: 20, stock: 100 },
+  { name: "Bag", price: 800, stock: 5 },
+  { name: "Notebook", price: 150, stock: 0 },
+  { name: "Headphones", price: 1200, stock: 12 },
+  { name: "Bottle", price: 400, stock: 30 },
+];
+const scores = [72, 45, 90, 38, 85, 60, 90];     
+
+// Part A: Warm-up (about 20 minutes)
+
+
+// Q1:Print the first item, the last item, and the length of
+//  scores. Add 100 to the end, remove the first score, and print the array after each change.
+
+
+
+console.log(scores[0]);
+console.log(scores[scores.length -1]);
+console.log(scores.length);
+scores.push(100);
+console.log(scores)
+scores.shift()
+console.log(scores)
