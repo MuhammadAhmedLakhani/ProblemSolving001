@@ -11,18 +11,63 @@ const products = [
 ];
 const scores = [72, 45, 90, 38, 85, 60, 90];     
 
-// Part A: Warm-up (about 20 minutes)
+// // Part A: Warm-up (about 20 minutes)
 
 
-// Q1:Print the first item, the last item, and the length of
-//  scores. Add 100 to the end, remove the first score, and print the array after each change.
+// // Q1:Print the first item, the last item, and the length of
+// //  scores. Add 100 to the end, remove the first score, and print the array after each change.
 
 
 
-console.log(scores[0]);
-console.log(scores[scores.length -1]);
-console.log(scores.length);
-scores.push(100);
-console.log(scores)
-scores.shift()
-console.log(scores)
+// console.log(scores[0]);
+// console.log(scores[scores.length -1]);
+// console.log(scores.length);
+// scores.push(100);
+// console.log(scores)
+// scores.shift()
+// console.log(scores)
+
+
+// Part B: Loops over arrays (about 30 minutes)
+
+//1: Loop through scores with a for loop and print only the passing ones (50 or above).
+
+
+    // for (let i = 0; i < scores.length; i++) {
+    //     if (scores[i] >= 50) {
+    //         console.log(scores[i])
+    //     }
+        
+    // }
+
+
+//2: Find the highest score and its position in the array, using a loop (don't use Math.max).
+
+let highest = scores[0];
+let highestIndex = 0;
+
+for (let i = 0; i < scores.length; i++) {
+    if (scores[i] >= highest) {
+        highest = scores[i]
+        highestIndex = i
+    }    
+}
+
+console.log(highestIndex);
+
+
+//3: Count how many times each score appears. Hint: 90 appears twice. Use an object as the tally.
+
+
+let scoreTally = {};
+
+for (let i = 0; i < scores.length; i++) {
+    let score = scores[i];
+    if(scoreTally[score] === undefined) {
+        scoreTally[score] = 1;
+    }else {
+        scoreTally[score] = scoreTally[score] + 1
+    }   
+}
+
+console.log(scoreTally)
