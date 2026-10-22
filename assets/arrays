@@ -113,3 +113,10 @@ const scores = [72, 45, 90, 38, 85, 60, 90];
 // console.log(product)
 
 //4: Use reduce to calculate the total value of all stock (price times stock, added up).
+
+
+let total = products.reduce((occ,curr) => {
+    return ( occ +  curr.price * curr.stock)
+},0)
+
+console.log(total);
