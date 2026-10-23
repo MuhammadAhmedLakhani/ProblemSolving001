@@ -76,7 +76,6 @@
 
 // Part C: Array methods (about 45 minutes)
 
-// Use some and every: is any product out of stock? Are all products under 2000
 
 
 const products = [
@@ -115,8 +114,19 @@ const scores = [72, 45, 90, 38, 85, 60, 90];
 //4: Use reduce to calculate the total value of all stock (price times stock, added up).
 
 
-let total = products.reduce((occ,curr) => {
-    return ( occ +  curr.price * curr.stock)
-},0)
+// let total = products.reduce((occ,curr) => {
+//     return ( occ +  curr.price * curr.stock)
+// },0)
 
-console.log(total);
+// console.log(total);
+
+
+//5: Use some and every: is any product out of stock? Are all products under 2000
+
+
+let outOfStock = products.some(elem => elem.stock === 0)
+console.log(outOfStock)
+
+
+let under2000 = products.every(elem => elem.price < 2000)
+console.log(under2000   )
