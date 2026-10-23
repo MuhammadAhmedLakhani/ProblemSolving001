@@ -167,3 +167,9 @@ let productsCopy = [...products];
 productsCopy.sort((a,b) => a.price - b.price);
 
 console.log(productsCopy)
+console.log(products)
+
+
+//3: Try sorting the products from most to least expensive.
+
+productsCopy.sort((a,b) => b.price - a.price);
