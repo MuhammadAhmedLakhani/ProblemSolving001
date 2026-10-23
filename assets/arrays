@@ -145,17 +145,25 @@ const scores = [72, 45, 90, 38, 85, 60, 90];
 //1: Shop discount. Make a new array of products where every price is reduced by 10%, without changing the original array. 
 // Print both to prove the original is untouched.
 
-// Sort trap. Predict, then run: [10, 9, 1, 100].sort(). Why 
-// isn't the result in numeric order? Fix it so it sorts numbers properly, and sort products by price from low to high.
+//2: Sort trap. Predict, then run: [10, 9, 1, 100].sort(). 
+// Why isn't the result in numeric order? 
+// Fix it so it sorts numbers properly, and sort products by price from low to high.
 
-
-let updatedProducts = products.map(elem => {
+// 1
+// let updatedProducts = products.map(elem => {
     
-    return {...elem,price:elem.price * 0.9 }
-}) 
+//     return {...else,price:elem.price * 0.9 }
+// }) 
 
-console.log(updatedProducts)
-console.log(products)
+// console.log(updatedProducts)
+// console.log(products)
 
 
+// 2
 
+let productsCopy = [...products];
+
+
+productsCopy.sort((a,b) => a.price - b.price);
+
+console.log(productsCopy)
