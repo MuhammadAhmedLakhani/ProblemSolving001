@@ -78,14 +78,14 @@
 
 
 
-const products = [
-  { name: "Pen", price: 20, stock: 100 },
-  { name: "Bag", price: 800, stock: 5 },
-  { name: "Notebook", price: 150, stock: 0 },
-  { name: "Headphones", price: 1200, stock: 12 },
-  { name: "Bottle", price: 400, stock: 30 },
-];
-const scores = [72, 45, 90, 38, 85, 60, 90];     
+// const products = [
+//   { name: "Pen", price: 20, stock: 100 },
+//   { name: "Bag", price: 800, stock: 5 },
+//   { name: "Notebook", price: 150, stock: 0 },
+//   { name: "Headphones", price: 1200, stock: 12 },
+//   { name: "Bottle", price: 400, stock: 30 },
+// ];
+// const scores = [72, 45, 90, 38, 85, 60, 90];     
 
 //1: Use filter to get the products that are in stock.
 //2:Use map to get an array of only the product names.
@@ -124,9 +124,38 @@ const scores = [72, 45, 90, 38, 85, 60, 90];
 //5: Use some and every: is any product out of stock? Are all products under 2000
 
 
-let outOfStock = products.some(elem => elem.stock === 0)
-console.log(outOfStock)
+// let outOfStock = products.some(elem => elem.stock === 0)
+// console.log(outOfStock)
 
 
-let under2000 = products.every(elem => elem.price < 2000)
-console.log(under2000   )
+// let under2000 = products.every(elem => elem.price < 2000)
+// console.log(under2000   )
+
+// Part D: Realistic scenarios (about 25 minutes)
+
+const products = [
+  { name: "Pen", price: 20, stock: 100 },
+  { name: "Bag", price: 800, stock: 5 },
+  { name: "Notebook", price: 150, stock: 0 },
+  { name: "Headphones", price: 1200, stock: 12 },
+  { name: "Bottle", price: 400, stock: 30 },
+];
+const scores = [72, 45, 90, 38, 85, 60, 90]; 
+
+//1: Shop discount. Make a new array of products where every price is reduced by 10%, without changing the original array. 
+// Print both to prove the original is untouched.
+
+// Sort trap. Predict, then run: [10, 9, 1, 100].sort(). Why 
+// isn't the result in numeric order? Fix it so it sorts numbers properly, and sort products by price from low to high.
+
+
+let updatedProducts = products.map(elem => {
+    
+    return {...elem,price:elem.price * 0.9 }
+}) 
+
+console.log(updatedProducts)
+console.log(products)
+
+
+
